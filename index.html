@@ -14,14 +14,32 @@
   ul { padding-left: 1.2rem; }
   li { margin: .2rem 0; }
   footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #8883; font-size: .9rem; color: #666; }
-  @media (prefers-color-scheme: dark) { .sub, footer { color: #999; } }
+  .hero { border: 1px solid #2b7; background: rgba(34,187,119,.09); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.25rem 0 1.5rem; }
+  .hero p { margin: .35rem 0; }
+  .hero a.btn { display: inline-block; margin-top: .35rem; background: #2b7; color: #fff; text-decoration: none; padding: .45rem .9rem; border-radius: 6px; font-weight: 600; }
+  .hero a.btn:hover { filter: brightness(1.08); }
+  .tag.legacy { background: #999; }
+  .note { color: #666; font-size: .92rem; margin: .3rem 0 .7rem; }
+  @media (prefers-color-scheme: dark) { .sub, footer, .note { color: #999; } }
 </style>
 </head>
 <body>
 <h1>sesame documentation</h1>
 <p class="sub">SEnsible Step-wise Analysis of DNA MEthylation BeadChips</p>
 
-<h2>dev <span class="tag">current</span></h2>
+<div class="hero">
+  <p><strong>SeSAMe documentation has moved.</strong></p>
+  <p>SeSAMe now runs as a standalone C tool — IDAT → betas → QC → differential
+     methylation → copy number, with visualization through cinderplot and no R
+     required, its betas validated bit-identical to the R package. Start there for
+     installation and the current workflow.</p>
+  <p><a class="btn" href="https://zwdzwd.github.io/sesame-cli/">Go to the sesame-cli docs &rarr;</a></p>
+</div>
+
+<h2>Legacy R vignettes <span class="tag legacy">archived</span></h2>
+<p class="note">Archived HTML snapshots of the R package vignettes &mdash;
+  <strong>no longer updated</strong>. For current R package documentation, see the
+  <a href="https://bioconductor.org/packages/sesame">Bioconductor package page</a>.</p>
 <ul>
   <li><a href="dev/sesame.html">Basic Usage &amp; Preprocessing</a></li>
   <li><a href="dev/QC.html">Quality Control</a></li>
